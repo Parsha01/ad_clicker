@@ -1,3 +1,4 @@
+
 """
 Ölüler ki bir gün gömülür
 İçimizdeki ölüler, dışımızdaki ölüler
@@ -5,9 +6,18 @@
 İnsan
     yaşıyorken
             özgürdür
-
                 -- Edip Cansever
 """
+
+
+
+
+
+
+
+
+
+
 
 import logging
 
@@ -23,7 +33,7 @@ file_handler = logging.FileHandler(LOG_FILENAME, mode="a", encoding="utf-8")
 console_handler.setLevel(logging.INFO)
 file_handler.setLevel(logging.DEBUG)
 
-# Create formatters and add it to handlers
+# Create formatters and add them to handlers
 console_log_format = "%(asctime)s [%(levelname)5s] %(lineno)3d: %(message)s"
 file_log_format = "%(asctime)s [%(levelname)5s] %(filename)s:%(lineno)3d: %(message)s"
 console_formatter = logging.Formatter(console_log_format, datefmt="%d-%m-%Y %H:%M:%S")
@@ -73,9 +83,7 @@ def update_log_formats(browser_id: str) -> None:
     logger.removeHandler(file_handler)
 
     console_log_format = "%(asctime)s <<%(browser_id)s>> [%(levelname)5s] %(lineno)3d: %(message)s"
-    file_log_format = (
-        "%(asctime)s <<%(browser_id)s>> [%(levelname)5s] %(filename)s:%(lineno)3d: %(message)s"
-    )
+    file_log_format = "%(asctime)s <<%(browser_id)s>> [%(levelname)5s] %(filename)s:%(lineno)3d: %(message)s"
     console_formatter = logging.Formatter(console_log_format, datefmt="%d-%m-%Y %H:%M:%S")
     console_handler.setFormatter(console_formatter)
     file_formatter = logging.Formatter(file_log_format, datefmt="%d-%m-%Y %H:%M:%S")
@@ -86,3 +94,14 @@ def update_log_formats(browser_id: str) -> None:
 
     logger.addHandler(console_handler)
     logger.addHandler(file_handler)
+
+
+def click_ad():
+    website_url = "https://timeupdate01.blogspot.com"  # Replace with your website URL
+
+    # Perform ad clicking actions for the provided website URL
+    # Add your code here to interact with the website and click on ads
+
+
+if __name__ == "__main__":
+    click_ad()
