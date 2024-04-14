@@ -10,7 +10,7 @@ configparser==5.0.2
 crayons==0.4.0
 exceptiongroup==1.0.0rc9
 h11==0.14.0
-idna==2.10
+idna==3.7
 mypy-extensions==0.4.3
 outcome==1.2.0
 pathspec==0.10.1
